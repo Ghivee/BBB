@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="Jual barang bekas kamu di BBB.id. Tambahkan foto, kategori, harga, kondisi, dan lokasi barang dengan mudah.">
+<title>Tambah produk - BBB.id</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23087653'/%3E%3Ctext x='16' y='22' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../app.css">
+<script src="../app.js" defer></script>
+</head>
+<body>
+<main class="bbb-shell bbb-page">
+    <header>
+        <a class="bbb-back-link" href="../dashboard/dashboard.html"><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span> Kembali ke dashboard</a>
+        <h1 class="bbb-section-title">Tambah produk</h1>
+        <p class="bbb-help">Isi data barang dengan jujur. Foto yang jelas membuat barang lebih cepat laku.</p>
+    </header>
+
+    <form id="product-form" class="bbb-form-layout" novalidate>
+        <section class="bbb-card">
+            <h2>Foto produk</h2>
+            <p>Maksimal 5 foto. Foto pertama menjadi foto sampul di daftar barang.</p>
+
+            <div class="bbb-photo-drop" data-photo-drop>
+                <span class="bbb-photo-drop-icon material-symbols-outlined" aria-hidden="true">add_photo_alternate</span>
+                <strong>Seret foto ke sini atau klik untuk memilih</strong>
+                <span class="bbb-field-help">Format JPG atau PNG. Foto disimpan di browser ini, tidak diunggah ke server.</span>
+                <input accept="image/*" multiple type="file" data-photo-input aria-label="Pilih foto produk">
+            </div>
+            <div class="bbb-photo-grid" data-photo-grid hidden></div>
+            <p class="bbb-field-help" data-photo-hint></p>
+        </section>
+
+        <section class="bbb-card">
+            <h2>Informasi barang</h2>
+
+            <label class="bbb-label" for="product_name">
+                Nama produk
+                <input class="bbb-input" id="product_name" maxlength="80" name="product_name" placeholder="Contoh: Buku Kalkulus Edisi 9 (mulus)" required>
+            </label>
+
+            <label class="bbb-label" for="category">
+                Kategori
+                <select class="bbb-select" id="category" name="category" required>
+                    <option value="buku">Buku &amp; Catatan</option>
+                    <option value="elektronik">Elektronik</option>
+                    <option value="kost">Perlengkapan Kos</option>
+                    <option value="pakaian">Fashion</option>
+                    <option value="lainnya">Lainnya</option>
+                </select>
+            </label>
+
+            <label class="bbb-label" for="price">
+                Harga
+                <span class="bbb-input-group">
+                    <span>Rp</span>
+                    <input class="bbb-input" id="price" inputmode="numeric" min="1000" name="price" placeholder="0" step="1000" type="number" required>
+                </span>
+                <small>Harga yang dilihat pembeli: <strong data-price-output>Belum diisi</strong></small>
+            </label>
+
+            <fieldset class="bbb-label" style="border: 0; margin: 0; padding: 0">
+                <legend>Kondisi barang</legend>
+                <div class="bbb-choice-row">
+                    <label class="bbb-choice"><input name="condition" type="radio" value="baru"><span>Baru</span></label>
+                    <label class="bbb-choice"><input checked name="condition" type="radio" value="seperti_baru"><span>Seperti Baru</span></label>
+                    <label class="bbb-choice"><input name="condition" type="radio" value="baik"><span>Bekas Pakai</span></label>
+                </div>
+            </fieldset>
+
+            <label class="bbb-label" for="location">
+                Lokasi barang
+                <select class="bbb-select" id="location" name="location" required>
+                    <option value="untidar">Universitas Tidar (UNTIDAR)</option>
+                    <option value="unimma">Universitas Muhammadiyah Magelang (UNIMMA)</option>
+                    <option value="akmil">Akademi Militer</option>
+                    <option value="pusat_kota">Pusat Kota Magelang (Alun-Alun)</option>
+                </select>
+                <small>Pilih lokasi yang paling mudah untuk?utmai COD.</small>
+            </label>
+
+            <label class="bbb-label" for="description">
+                Deskripsi
+                <textarea class="bbb-textarea" id="description" maxlength="1000" name="description" placeholder="Contoh: Buku Pemakaian untuk tugas akhir, halaman bersih, tidak ada coretan. Dicuci dan siap pakai." required></textarea>
+                <small><span data-description-count>0/1000 karakter</span></small>
+            </label>
+
+            <div class="bbb-form-actions">
+                <button class="bbb-button secondary" type="button" data-cancel-product>Batal</button>
+                <button class="bbb-button" type="submit"><span class="material-symbols-outlined" aria-hidden="true">publish</span> <span data-submit-label>Terbitkan produk</span></button>
+            </div>
+        </section>
+    </form>
+</main>
+</body>
+</html>

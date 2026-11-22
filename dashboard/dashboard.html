@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="Kelola produk, pesanan, wishlist, tawaran, pesan, dan pengaturan akun BBB.id dalam satu dashboard.">
+<title>Dashboard - BBB.id</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23087653'/%3E%3Ctext x='16' y='22' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../app.css">
+<script src="../app.js" defer></script>
+</head>
+<body>
+<main class="bbb-dashboard-shell" data-dashboard>
+    <section class="bbb-dashboard-card">
+        <div class="bbb-profile-head">
+            <div class="bbb-avatar bbb-dashboard-avatar" data-profile-avatar aria-hidden="true">MB</div>
+            <div class="bbb-profile-copy">
+                <h2 data-profile-name>Nama kamu</h2>
+                <div class="bbb-profile-meta">
+                    <span class="bbb-profile-campus"><span class="material-symbols-outlined" aria-hidden="true">school</span> <span data-profile-campus>Kampus belum diisi</span></span>
+                    <span class="bbb-verification-label" data-verification-status data-verified="false">Verifikasi mahasiswa belum selesai</span>
+                </div>
+                <p class="bbb-profile-note">Kelola profil, produk, pesanan, dan komunikasi di satu tempat.</p>
+            </div>
+            <a class="bbb-button" href="../tambah_produk/tambah_produk.html"><span class="material-symbols-outlined" aria-hidden="true">add_circle</span> Jual barang</a>
+        </div>
+
+        <div class="bbb-stat-row">
+            <div class="bbb-stat">
+                <strong><span data-dashboard-products>0</span></strong>
+                <span>Produk tayang</span>
+            </div>
+            <div class="bbb-stat">
+                <strong><span data-dashboard-transactions>0</span></strong>
+                <span>Transaksi selesai</span>
+            </div>
+            <div class="bbb-stat">
+                <strong><span data-profile-rating>0.0</span></strong>
+                <span>Rating kamu</span>
+            </div>
+        </div>
+
+        <nav class="bbb-dashboard-tabs" aria-label="Menu dashboard">
+            <a class="bbb-dashboard-tab" data-dashboard-tab="products" href="dashboard.html?tab=products" aria-current="page">
+                <span class="material-symbols-outlined" aria-hidden="true">inventory_2</span>
+                Produk saya
+                <span class="bbb-tab-count"></span>
+            </a>
+            <a class="bbb-dashboard-tab" data-dashboard-tab="purchases" href="dashboard.html?tab=purchases" aria-current="false">
+                <span class="material-symbols-outlined" aria-hidden="true">receipt_long</span>
+                Pesanan &amp; pembelian
+                <span class="bbb-tab-count"></span>
+            </a>
+            <a class="bbb-dashboard-tab" data-dashboard-tab="wishlist" href="dashboard.html?tab=wishlist" aria-current="false">
+                <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                Wishlist
+                <span class="bbb-tab-count"></span>
+            </a>
+            <a class="bbb-dashboard-tab" data-dashboard-tab="offers" href="dashboard.html?tab=offers" aria-current="false">
+                <span class="material-symbols-outlined" aria-hidden="true">local_offer</span>
+                Tawaran
+                <span class="bbb-tab-count"></span>
+            </a>
+            <a class="bbb-dashboard-tab" data-dashboard-tab="messages" href="dashboard.html?tab=messages" aria-current="false">
+                <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+                Pesan
+                <span class="bbb-tab-count"></span>
+            </a>
+            <a class="bbb-dashboard-tab" data-dashboard-tab="settings" href="dashboard.html?tab=settings" aria-current="false">
+                <span class="material-symbols-outlined" aria-hidden="true">settings</span>
+                Pengaturan
+                <span class="bbb-tab-count"></span>
+            </a>
+        </nav>
+    </section>
+
+    <div class="bbb-dashboard-content" id="dashboard-content" aria-busy="true">
+        <div class="bbb-dashboard-skeleton" data-dashboard-skeleton aria-hidden="true">
+            <div class="bbb-dashboard-skeleton-head">
+                <span class="bbb-skeleton-avatar"></span>
+                <div>
+                    <span class="bbb-skeleton-line"></span>
+                    <span class="bbb-skeleton-line short"></span>
+                </div>
+            </div>
+            <div class="bbb-dashboard-skeleton-cards">
+                <span class="bbb-skeleton-card"></span>
+                <span class="bbb-skeleton-card"></span>
+                <span class="bbb-skeleton-card"></span>
+            </div>
+            <span class="bbb-skeleton-line"></span>
+            <span class="bbb-skeleton-card large"></span>
+        </div>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="Cari barang bekas mahasiswa Magelang di BBB.id. Filter kategori, kondisi, harga, dan lokasi UNTIDAR, UNIMMA, atau Akabri.">
+<title>Cari barang — BBB.id</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23087653'/%3E%3Ctext x='16' y='22' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../app.css">
+<script src="../app.js" defer></script>
+</head>
+<body>
+<main class="bbb-shell bbb-page">
+    <div class="bbb-inline-search">
+        <label class="sr-only" for="mobile-search">Cari barang</label>
+        <input class="bbb-input" data-marketplace-search id="mobile-search" type="search" placeholder="Cari buku, elektronik, perlengkapan kos...">
+    </div>
+
+    <div class="bbb-marketplace-layout">
+        <aside class="bbb-filter-panel" aria-label="Filter produk">
+            <h2>Filter</h2>
+
+            <div class="bbb-filter-group">
+                <h3>Kategori</h3>
+                <label class="bbb-check-row"><input type="checkbox" checked> Semua kategori</label>
+                <label class="bbb-check-row"><input type="checkbox"> Buku &amp; catatan</label>
+                <label class="bbb-check-row"><input type="checkbox"> Elektronik</label>
+                <label class="bbb-check-row"><input type="checkbox"> Fashion</label>
+                <label class="bbb-check-row"><input type="checkbox"> Perlengkapan kos</label>
+            </div>
+
+            <div class="bbb-filter-group">
+                <h3>Harga maksimum</h3>
+                <input class="bbb-range" type="range" min="0" max="10000000" step="50000" value="10000000" data-max-price aria-label="Harga maksimum">
+                <div class="bbb-range-scale"><span>Rp 0</span><span data-price-output>Rp 10.000.000+</span></div>
+            </div>
+
+            <div class="bbb-filter-group">
+                <h3>Lokasi di Magelang</h3>
+                <label class="bbb-check-row"><input type="radio" name="location" value="" checked> Semua lokasi</label>
+                <label class="bbb-check-row"><input type="radio" name="location" value="untidar"> Universitas Tidar (UNTIDAR)</label>
+                <label class="bbb-check-row"><input type="radio" name="location" value="unimma"> Universitas Muhammadiyah Magelang (UNIMMA)</label>
+                <label class="bbb-check-row"><input type="radio" name="location" value="akmil"> Akademi Militer</label>
+                <label class="bbb-check-row"><input type="radio" name="location" value="pusat_kota"> Pusat Kota Magelang (Alun-Alun)</label>
+            </div>
+
+            <div class="bbb-filter-group">
+                <h3>Kondisi</h3>
+                <div class="bbb-pill-row">
+                    <button class="bbb-pill is-active" type="button" data-condition-filter="all">Semua</button>
+                    <button class="bbb-pill" type="button" data-condition-filter="baru">Baru</button>
+                    <button class="bbb-pill" type="button" data-condition-filter="bekas-seperti-baru">Seperti Baru</button>
+                    <button class="bbb-pill" type="button" data-condition-filter="bekas-pakai">Bekas Pakai</button>
+                </div>
+            </div>
+        </aside>
+
+        <div>
+            <div class="bbb-result-bar">
+                <p id="result-info" aria-live="polite">Menampilkan <strong>0</strong> produk ditemukan</p>
+                <div class="bbb-sort">
+                    <label for="product-sort">Urutkan</label>
+                    <select class="bbb-select" id="product-sort">
+                        <option value="latest">Terbaru</option>
+                        <option value="low">Harga terendah</option>
+                        <option value="high">Harga tertinggi</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="bbb-product-grid" id="product-grid">
+                <article class="bbb-user-product" data-seed-card data-condition="baru">
+                    <a class="bbb-card-link" href="../detail_produk/detail_produk.html">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDklDo7HDDoeCDT5FnqxTlrWs2zvjQccU9RtvMbLeHoo2vCVchK43ZVW2XQ0CC_o1L5KbK4zo5MfbAr9E3a_82Xd004FHbscpFiTuMYIHw206yBYknEEcJhM69gW1SRaC91pfMTBXRujXN14MkfJvu5VwscxwtsQnpllLGELIRDvM4Jul-FNTq5RksCd0BpuXLIIU1K4TDQ3v_NThPz2FQxCKBmR5to64NxjmqfmigDccGdVJEebhx_YY4j5OfO-bwEUlAiuUOQZV0" alt="Buku Kalkulus Edisi 9 - Purcell" width="400" height="400">
+                        <div class="bbb-user-product-body">
+                            <span class="bbb-status" data-condition-label>Baru</span>
+                            <h3>Buku Kalkulus Edisi 9 - Purcell (Mulus)</h3>
+                            <p><strong class="bbb-price text-price-tag">Rp 120.000</strong> · <span data-location-label>Universitas Tidar (UNTIDAR)</span></p>
+                        </div>
+                    </a>
+                    <button class="bbb-marketplace-chat" type="button">Chat Penjual</button>
+                </article>
+
+                <article class="bbb-user-product" data-seed-card data-condition="bekas-pakai">
+                    <a class="bbb-card-link" href="../detail_produk/detail_produk.html">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPb3q3hfQ77YUTftnICY6h5sLnmjMgXS_mwC5S07sDyBK1kkRCrM-lnFPsWd__xG8RLc3ByxrnLq7dftzQ8emyWV0iO9SbaYBOmypF4Rn2B_b5O4mA-hU_YpR90Y4L6fYaACDs3Dw6uN3YRMOo3toD6aSgS6zB55F67G8hzu0j8_gOgbbb9EdY2w_9Rclwlq9PwqfB-x9-bPWuKVvJy_wFN7Ae8S4kYv1h9EBz5BfPc_RLGTjUTDROZ3hIt1qDsyfYw30KTtiU03c" alt="MacBook Air M1 2020" width="400" height="400">
+                        <div class="bbb-user-product-body">
+                            <span class="bbb-status" data-condition-label>Bekas Pakai</span>
+                            <h3>MacBook Air M1 2020 8/256GB - BU Cepat</h3>
+                            <p><strong class="bbb-price text-price-tag">Rp 9.500.000</strong> · <span data-location-label>Universitas Muhammadiyah Magelang (UNIMMA)</span></p>
+                        </div>
+                    </a>
+                    <button class="bbb-marketplace-chat" type="button">Chat Penjual</button>
+                </article>
+
+                <article class="bbb-user-product" data-seed-card data-condition="bekas-seperti-baru">
+                    <a class="bbb-card-link" href="../detail_produk/detail_produk.html">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLbP9WykD7Mwbv3gHf5l86IO50MKX5HsciuCRmwSRrO4--A_9laMxqv-JfxaEzi6vPh7FBlnQgB-rv2SGgJhLQ1NQkl--pRbkSfL6Bwlg97r5CmS4s9_5fL5w4AIBxCXKKuEeQlcTMlG_ZZvQDYJXPfdm7RGkXWaFlwk4VlHOWE9VZKECWMMKpRGdXLavxx5OrqeSHqZKTylokmjvmyglaFxqiM4zfys13vQgiXD1kESf9b5ZIz_4OzHm3GErNKknjl2QMq7kXXww" alt="Kemeja Flannel Uniqlo Size L" width="400" height="400">
+                        <div class="bbb-user-product-body">
+                            <span class="bbb-status" data-condition-label>Seperti Baru</span>
+                            <h3>Kemeja Flannel Uniqlo Size L - Jarang Pakai</h3>
+                            <p><strong class="bbb-price text-price-tag">Rp 85.000</strong> · <span data-location-label>Universitas Tidar (UNTIDAR)</span></p>
+                        </div>
+                    </a>
+                    <button class="bbb-marketplace-chat" type="button">Chat Penjual</button>
+                </article>
+
+                <article class="bbb-user-product" data-seed-card data-condition="bekas-seperti-baru">
+                    <a class="bbb-card-link" href="../detail_produk/detail_produk.html">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHmPXbARYfyU9nlIKJ0Gx27XIrXrGYuA3GDXgJINRHkmvCVglx76t-wbTyZUd-xFaqweZgEEyyiQqngzeTY-YZJo_cnGGTIRPwJNTl3EirbOiKv8gcpCEPbipoYoDoZOnS3Ksoi0MRFaHK3ui4kbjXsDiZC725H-GfqOToGwHAgGuHgwmc4xBbazObMZ9JUQaXQZhjLx3EnD9OadNt8MuHFI3G3A9CwQtBOF1XnW8LZu-M0HDLY0PtBg5QP2GSaHtwlYvCU9WdYGQ" alt="Kalkulator Casio fx-991EX ClassWiz" width="400" height="400">
+                        <div class="bbb-user-product-body">
+                            <span class="bbb-status" data-condition-label>Seperti Baru</span>
+                            <h3>Kalkulator Casio fx-991EX ClassWiz</h3>
+                            <p><strong class="bbb-price text-price-tag">Rp 200.000</strong> · <span data-location-label>Pusat Kota Magelang (Alun-Alun)</span></p>
+                        </div>
+                    </a>
+                    <button class="bbb-marketplace-chat" type="button">Chat Penjual</button>
+                </article>
+
+                <article class="bbb-user-product" data-seed-card data-condition="bekas-pakai">
+                    <a class="bbb-card-link" href="../detail_produk/detail_produk.html">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM2YCa7cLcu505xRAGRnqOG4DgM1CCEky0wgPC2wNCRFBkJgOkR06vuTaZjMA2j9qBhe7tWWyvbsyZeaVT6fL4V_Hy9OdwT1ZNAGiGsCzrVKoXKwvPL29KI-yfFs9BzeVlygOCH0EoRKtdmqn_h_3hUfml40hEccSdOwwMa0h5KtbSPuC8GKmU3lNJDBh2GMlhaC-BxjbD-9Gn3MC-iHeUzedualg_HL_nLr-zQB02ov3J8syjuCDthSWMWeUiAgI2HHaXF5RT3D8" alt="Rak Sepatu Kayu Minimalis" width="400" height="400">
+                        <div class="bbb-user-product-body">
+                            <span class="bbb-status" data-condition-label>Bekas Pakai</span>
+                            <h3>Rak Sepatu Kayu Minimalis (Cocok utk Kosan)</h3>
+                            <p><strong class="bbb-price text-price-tag">Rp 45.000</strong> · <span data-location-label>Universitas Tidar (UNTIDAR)</span></p>
+                        </div>
+                    </a>
+                    <button class="bbb-marketplace-chat" type="button">Chat Penjual</button>
+                </article>
+            </div>
+
+            <nav class="bbb-pagination" data-marketplace-pagination aria-label="Halaman produk">
+                <button type="button" data-page-step="-1" aria-label="Halaman sebelumnya"><span class="material-symbols-outlined" aria-hidden="true">chevron_left</span></button>
+                <button type="button" data-page="1" aria-label="Halaman 1" aria-current="page">1</button>
+                <button type="button" data-page="2" aria-label="Halaman 2">2</button>
+                <button type="button" data-page="3" aria-label="Halaman 3">3</button>
+                <span data-page-dots class="material-symbols-outlined" aria-hidden="true" hidden>more_horiz</span>
+                <button type="button" data-page-step="1" aria-label="Halaman berikutnya"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></button>
+            </nav>
+        </div>
+    </div>
+</main>
+</body>
+</html>

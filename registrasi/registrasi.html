@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="Daftar akun BBB.id untuk jual beli barang bekas mahasiswa Magelang.">
+<title>Daftar - BBB.id</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23087653'/%3E%3Ctext x='16' y='22' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../app.css">
+<script src="../app.js" defer></script>
+</head>
+<body class="bbb-auth">
+<main class="bbb-register-main">
+    <section class="bbb-register-card">
+        <div class="bbb-auth-heading">
+            <span class="bbb-auth-eyebrow">Bergabung dengan mahasiswa Magelang</span>
+            <h1>Buat akun BBB.id</h1>
+            <p>Buat akun, lengkapi profil kampus, lalu verifikasi alamat emailmu.</p>
+        </div>
+
+        <ol class="bbb-register-progress">
+            <li class="is-current" data-progress="1"><span>1</span>Akun</li>
+            <li data-progress="2"><span>2</span>Kampus</li>
+            <li data-progress="3"><span>3</span>Verifikasi</li>
+        </ol>
+
+        <form id="register-form">
+            <fieldset data-register-step="1">
+                <legend>Data akun</legend>
+
+                <label for="register-name">Nama lengkap</label>
+                <input autocomplete="name" id="register-name" maxlength="60" name="name" placeholder="Contoh: Aulia Rahma" required type="text">
+
+                <label for="register-email">Email</label>
+                <input autocomplete="email" id="register-email" name="email" placeholder="nama@kampus.ac.id" required type="email">
+
+                <label for="register-student-id">Nomor induk mahasiswa</label>
+                <input id="register-student-id" inputmode="numeric" maxlength="20" name="studentId" placeholder="Contoh: 221040123" required type="text">
+
+                <label for="register-password">Kata sandi</label>
+                <div class="bbb-password-field">
+                    <input autocomplete="new-password" id="register-password" minlength="8" name="password" required type="password">
+                    <button class="bbb-password-toggle" type="button" aria-pressed="false" aria-label="Tampilkan kata sandi">Tampilkan</button>
+                </div>
+                <p class="bbb-field-help">Minimal 8 karakter. Kata sandi diproses oleh Supabase Auth.</p>
+
+                <label for="register-confirm">Konfirmasi kata sandi</label>
+                <div class="bbb-password-field">
+                    <input autocomplete="new-password" id="register-confirm" minlength="8" name="confirmPassword" required type="password">
+                    <button class="bbb-password-toggle" type="button" aria-pressed="false" aria-label="Tampilkan konfirmasi kata sandi">Tampilkan</button>
+                </div>
+            </fieldset>
+
+            <fieldset data-register-step="2" hidden disabled>
+                <legend>Data kampus</legend>
+
+                <label for="register-campus">Perguruan tinggi</label>
+                <select id="register-campus" name="campus" required>
+                    <option value="">Pilih kampus</option>
+                    <option value="Universitas Tidar (UNTIDAR)">Universitas Tidar (UNTIDAR)</option>
+                    <option value="Universitas Muhammadiyah Magelang (UNIMMA)">Universitas Muhammadiyah Magelang (UNIMMA)</option>
+                    <option value="Akademi Militer">Akademi Militer</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+
+                <div class="bbb-campus-other" data-campus-other hidden>
+                    <label class="bbb-field-help" for="register-campus-other">Nama perguruan tinggi lain</label>
+                    <input id="register-campus-other" maxlength="60" name="campusOther" type="text">
+                </div>
+
+                <label for="register-entry-year">Tahun masuk</label>
+                <select id="register-entry-year" name="entryYear" required></select>
+
+                <label for="register-phone">Nomor WhatsApp</label>
+                <input id="register-phone" inputmode="tel" maxlength="15" name="phone" placeholder="08xxxxxxxxxx" required type="tel">
+
+                <span class="bbb-label">Foto profil<span class="bbb-field-help">Opsional. Tampil di dashboard dan di halaman produk yang kamu jual.</span></span>
+                <div class="bbb-photo-drop" data-photo-drop>
+                    <span class="bbb-photo-drop-icon material-symbols-outlined" aria-hidden="true">face</span>
+                    <strong>Seret foto ke sini atau klik untuk memilih</strong>
+                    <span class="bbb-field-help">JPG atau PNG. Foto profil akan disimpan dengan aman.</span>
+                    <input accept="image/*" data-profile-photo type="file" aria-label="Pilih foto profil">
+                </div>
+                <div class="bbb-photo-grid" data-photo-grid hidden></div>
+                <p class="bbb-field-help" data-photo-hint></p>
+
+                <label class="bbb-terms">
+                    <input name="terms" required type="checkbox">
+                    <span>Saya setuju barang yang saya jual berasal dari saya sendiri, deskripsi jujur, dan transaksi diselesaikan secara lokal.</span>
+                </label>
+            </fieldset>
+
+            <fieldset data-register-step="3" hidden disabled>
+                <legend>Verifikasi</legend>
+                <p class="bbb-verify-copy">Tautan verifikasi dikirim ke <strong data-register-email>email kamu</strong>. Buka email tersebut untuk mengaktifkan akun; kamu akan masuk otomatis setelah verifikasi.</p>
+                <button class="bbb-link-button" type="button" data-resend-code>Kirim ulang tautan verifikasi</button>
+            </fieldset>
+
+            <p class="bbb-form-message" id="register-message" role="alert"></p>
+
+            <div class="bbb-register-actions">
+                <button class="bbb-auth-secondary" data-register-back hidden type="button">Kembali</button>
+                <button class="bbb-auth-submit" data-register-next type="submit">Lanjut</button>
+            </div>
+        </form>
+    </section>
+
+    <aside class="bbb-register-aside">
+        <span class="bbb-register-art-mark">BBB</span>
+        <h2>Kenapa pakai BBB.id?</h2>
+        <ul>
+            <li>Barang dari mahasiswa, untuk mahasiswa.</li>
+            <li>Foto, kondisi, dan lokasi ditulis lengkap oleh penjual.</li>
+            <li>Pilih COD atau pembayaran online setelah penjual mengonfirmasi.</li>
+            <li>Tanpa biaya iklan dan tanpa algoritma yang menyembunyikan barang.</li>
+        </ul>
+    </aside>
+</main>
+</body>
+</html>

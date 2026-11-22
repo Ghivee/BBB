@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Foto produk belum tersedia</title>
+  <desc id="desc">Ilustrasi kotak produk dengan warna hijau lembut.</desc>
+  <rect width="640" height="640" fill="#f1f6f2"/>
+  <circle cx="320" cy="270" r="126" fill="#e2eee6"/>
+  <path d="m231 235 89-48 89 48v103l-89 49-89-49V235Z" fill="#fff" stroke="#087653" stroke-linejoin="round" stroke-width="12"/>
+  <path d="m231 235 89 49 89-49M320 284v103m-89-152 89 50 89-50" fill="none" stroke="#087653" stroke-linejoin="round" stroke-width="12"/>
+  <text x="320" y="478" fill="#52635a" font-family="Arial,sans-serif" font-size="28" text-anchor="middle">Foto belum tersedia</text>
+</svg>

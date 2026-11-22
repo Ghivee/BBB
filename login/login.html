@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="Masuk ke akun BBB.id untuk mengelola produk, pesanan, wishlist, dan pesan dengan penjual.">
+<title>Masuk - BBB.id</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23087653'/%3E%3Ctext x='16' y='22' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../app.css">
+<script src="../app.js" defer></script>
+</head>
+<body class="bbb-auth">
+<main class="bbb-auth-main">
+    <section class="bbb-auth-card">
+        <div class="bbb-auth-heading">
+            <span class="bbb-auth-eyebrow">Selamat datang kembali</span>
+            <h1>Masuk ke BBB.id</h1>
+            <p>Gunakan email dan kata sandi yang kamu pakai saat pendaftaran.</p>
+        </div>
+
+        <form id="login-form">
+            <label for="login-email">Email</label>
+            <input autocomplete="email" id="login-email" name="email" required type="email" placeholder="nama@kampus.ac.id">
+
+            <label for="login-password">Kata sandi</label>
+            <div class="bbb-password-field">
+                <input autocomplete="current-password" id="login-password" minlength="8" name="password" required type="password">
+                <button class="bbb-password-toggle" type="button" aria-pressed="false" aria-label="Tampilkan kata sandi">Tampilkan</button>
+            </div>
+
+            <div class="bbb-auth-options">
+                <label class="bbb-check"><input name="remember" type="checkbox" checked> Ingat saya di browser ini</label>
+                <a href="../lupa_password/lupa_password.html">Lupa kata sandi?</a>
+            </div>
+
+            <p class="bbb-form-message" id="login-message" role="alert"></p>
+            <button class="bbb-auth-submit" type="submit">Masuk</button>
+
+            <p class="bbb-auth-switch">Belum punya akun? <a href="../registrasi/registrasi.html">Daftar gratis</a></p>
+            <p class="bbb-auth-note">Profil, produk, dan pesanan tersinkron dengan akunmu setelah email diverifikasi.</p>
+        </form>
+    </section>
+
+    <aside class="bbb-auth-aside">
+        <div class="bbb-auth-aside-content">
+            <span class="bbb-auth-aside-icon material-symbols-outlined" aria-hidden="true">handshake</span>
+            <h2>Transaksi antar mahasiswa, tanpa perantara</h2>
+            <p>Temukan barang dari sekitar UNTIDAR, UNIMMA, dan Akabri. Sepakati COD atau antar lokal, lalu beri ulasan setelah barang diterima.</p>
+            <a href="../marketplace/marketplace.html">Jelajahi marketplace</a>
+        </div>
+    </aside>
+</main>
+</body>
+</html>
